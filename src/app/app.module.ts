@@ -12,11 +12,11 @@ import { RecipesItemComponent } from './recipes/recipes-list/recipes-item/recipe
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 
-const appRoutes: Routes = [
-  { path: '#', component: HeaderComponent },
-  { path: 'app-recipes', component: RecipesComponent },
-  { path: 'app-shopping-edit', component: ShoppingListComponent },
-]
+// const appRoutes: Routes = [
+//   { path: '#', component: HeaderComponent },
+//   { path: 'app-recipes', component: RecipesComponent },
+//   { path: 'app-shopping-edit', component: ShoppingListComponent },
+// ]
 
 @NgModule({
   declarations: [
@@ -32,10 +32,10 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: true }
-    )
+    // RouterModule.forRoot(
+    //   appRoutes,
+    //   { enableTracing: true }
+    // )
   ],
   providers: [],
   bootstrap: [AppComponent]
