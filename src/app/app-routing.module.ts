@@ -9,9 +9,10 @@ import { RecipesComponent } from './recipes/recipes.component';
 import { HeaderComponent } from './header/header.component';
 
 const appRoutes: Routes = [
+  // { path: '', component: RecipesComponent},
   { path: '', redirectTo: '/recipes', pathMatch: 'full'},
-  { path: 'recipes', component: RecipesComponent, },
-  { path: 'shopping-list', component: ShoppingListComponent },
+  { path: 'recipes', component: RecipesComponent },
+  { path: 'shopping-list', component: ShoppingListComponent }
 ];
 
 @NgModule({
