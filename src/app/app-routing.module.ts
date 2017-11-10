@@ -7,11 +7,15 @@ import { RecipesListComponent } from './recipes/recipes-list/recipes-list.compon
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { RecipesComponent } from './recipes/recipes.component';
 import { HeaderComponent } from './header/header.component';
+import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 
 const appRoutes: Routes = [
   // { path: '', component: RecipesComponent},
   { path: '', redirectTo: '/recipes', pathMatch: 'full'},
-  { path: 'recipes', component: RecipesComponent },
+  { path: 'recipes', component: RecipesComponent, children: [
+    { path: '', component: RecipeStartComponent },
+    { path: ':id', component: RecipesDetailsComponent }
+  ] },
   { path: 'shopping-list', component: ShoppingListComponent }
 ];
 
