@@ -15,8 +15,8 @@ const appRoutes: Routes = [
   { path: '', redirectTo: '/recipes', pathMatch: 'full'},
   { path: 'recipes', component: RecipesComponent, children: [
     { path: '', component: RecipeStartComponent },
-    { path: ':id', component: RecipesDetailsComponent },
     { path: 'new', component: RecipeEditComponent },
+    { path: ':id', component: RecipesDetailsComponent },
     { path: ':id/edit', component: RecipeEditComponent }
   ] },
   { path: 'shopping-list', component: ShoppingListComponent }
@@ -24,7 +24,7 @@ const appRoutes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(appRoutes, {enableTracing: true})
+    RouterModule.forRoot(appRoutes)
   ],
   exports: [RouterModule]
 })
