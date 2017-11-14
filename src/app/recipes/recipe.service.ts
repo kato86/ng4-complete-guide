@@ -1,8 +1,16 @@
+<<<<<<< HEAD
+=======
+import { Ingredient } from './../shared/ingredient.model';
+>>>>>>> work
 import { EventEmitter, Injectable } from '@angular/core';
 
 import { Ingredient } from './../shared/ingredient.model';
 import { Recipe } from './recipe.model';
+<<<<<<< HEAD
 import { ShoppingListService } from '../shopping-list/shopping-list.service';
+=======
+import { ShoppingListService } from './../shopping-list/shopping-list.service';
+>>>>>>> work
 
 @Injectable()
 export class RecipeService {
@@ -33,8 +41,17 @@ export class RecipeService {
     return this.recipes.slice();
   }
 
+<<<<<<< HEAD
   addIngredientsToShoppingList(ingredients: Ingredient[]) {
     this.slService.addIngredients(ingredients);
+=======
+  getRecipe(index: number) {
+    return this.recipes[index];
+  }
+
+  addIngredientsToShoppingList(ingredient: Ingredient[]) {
+    this.slService.addIngredients(ingredient);
+>>>>>>> work
   }
 
 
