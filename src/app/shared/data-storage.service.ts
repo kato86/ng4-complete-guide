@@ -18,6 +18,7 @@ export class DataStorageService {
             .map(
                 (response: Response) => {
                     const recipes: Recipe[] = response.json();
+                    // tslint:disable-next-line:prefer-const
                     for (let recipe of recipes) {
                         if (!recipe['ingredients']) {
                             recipe['ingredients'] = [];
