@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.component';
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { SingupComponent } from './auth/singup/singup.component';
+import { SinginComponent } from './auth/singin/singin.component';
 
 const appRoutes: Routes = [
   // { path: '', component: RecipesComponent},
@@ -21,7 +22,8 @@ const appRoutes: Routes = [
     { path: ':id/edit', component: RecipeEditComponent }
   ] },
   { path: 'shopping-list', component: ShoppingListComponent },
-  { path: 'singup', component: SingupComponent }
+  { path: 'singup', component: SingupComponent },
+  { path: 'singin', component: SinginComponent }
 ];
 
 @NgModule({
