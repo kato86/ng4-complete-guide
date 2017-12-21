@@ -11,15 +11,16 @@ import { RecipeStartComponent } from './recipes/recipe-start/recipe-start.compon
 import { RecipeEditComponent } from './recipes/recipe-edit/recipe-edit.component';
 import { SingupComponent } from './auth/singup/singup.component';
 import { SinginComponent } from './auth/singin/singin.component';
+import { AuthGuardService } from './auth/auth-guard.service';
 
 const appRoutes: Routes = [
   // { path: '', component: RecipesComponent},
   { path: '', redirectTo: '/recipes', pathMatch: 'full'},
   { path: 'recipes', component: RecipesComponent, children: [
     { path: '', component: RecipeStartComponent },
-    { path: 'new', component: RecipeEditComponent },
+    { path: 'new', component: RecipeEditComponent, canActivate: [AuthGuardService] },
     { path: ':id', component: RecipesDetailsComponent },
-    { path: ':id/edit', component: RecipeEditComponent }
+    { path: ':id/edit', component: RecipeEditComponent, canActivate: [AuthGuardService] }
   ] },
   { path: 'shopping-list', component: ShoppingListComponent },
   { path: 'singup', component: SingupComponent },
